@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+:root {
+    /* Paleta Rosa Pastel & Marrom Chocolate */
+    --cor-fundo: #fbe4e8;         /* Rosa pastel bem suave */
+    --cor-card: #fff0f3;          /* Rosa pastel clarinho (fundo da caixa) */
+    --cor-chocolate: #4a2e2b;     /* Marrom chocolate escuro (texto principal) */
+    --cor-rosa-medio: #f7aef8;    /* Rosa pastel médio (botões) */
+    --cor-chocolate-suave: #6b4440;/* Marrom médio para destaques e hover */
+    --cor-destaque-hover: #b37ba4; /* Tom suave ao passar o mouse */
+    --cor-branca: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-chocolate);
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.caixa-principal {
+    background-color: var(--cor-card);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    padding: 35px 25px;
+    border-radius: 25px;
+    border: 3px solid #f3c4fb;
+    box-shadow: 0 10px 25px rgba(74, 46, 43, 0.08);
+}
+
+h1, .caixa-perguntas, .caixa-resultado {
+    font-family: 'Fredoka', cursive, sans-serif;
+}
+
+h1 {
+    color: var(--cor-chocolate);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.tela-inicial p {
+    line-height: 1.6;
+    margin-bottom: 25px;
+    font-size: 1.05rem;
+}
+
+button {
+    background-color: var(--cor-chocolate);
+    color: var(--cor-branca);
+    font-family: 'Fredoka', cursive, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 20px;
+    padding: 14px 28px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(74, 46, 43, 0.15);
+}
+
+button:hover {
+    background-color: var(--cor-chocolate-suave);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(74, 46, 43, 0.2);
+}
+
+.caixa-alternativas {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.caixa-alternativas button {
+    background-color: var(--cor-rosa-medio);
+    color: var(--cor-chocolate);
+}
+
+.caixa-alternativas button:hover {
+    background-color: var(--cor-destaque-hover);
+    color: var(--cor-branca);
+}
+
+.caixa-resultado {
+    display: none;
+}
+
+.caixa-resultado.mostrar {
+    display: block;
+}
+
+.texto-resultado {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
